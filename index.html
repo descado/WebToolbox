@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Документация разработчика: Web Toolbox API</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; display: flex; }
+        .sidebar { width: 250px; background: #f4f5f7; border-right: 1px solid #ddd; padding: 20px; height: 100vh; position: fixed; }
+        .content { margin-left: 270px; padding: 40px; max-width: 900px; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        .class-header { background: #ecf0f1; padding: 10px; border-left: 5px solid #34495e; font-family: monospace; font-size: 1.1em; }
+        .method { margin-top: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px; background: #fafafa; }
+        .method-signature { font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #d35400; font-size: 1.1em; margin-bottom: 10px; }
+        .parameters { margin-top: 10px; border-collapse: collapse; width: 100%; }
+        .parameters th, .parameters td { text-align: left; padding: 8px; border-bottom: 1px solid #ddd; }
+        .parameters th { background-color: #f2f2f2; width: 20%; }
+        .type { color: #27ae60; font-family: monospace; }
+        .footer { margin-top: 50px; font-size: 0.8em; color: #7f8c8d; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Web Toolbox API</h3>
+        <ul style="list-style-type: none; padding: 0;">
+            <li>📁 <a href="#password_generator" style="text-decoration: none; color: #34495e;">password_generator.py</a></li>
+            <li>📁 <a href="#text_analyzer" style="text-decoration: none; color: #34495e;">text_analyzer.py</a></li>
+        </ul>
+        <p style="font-size: 0.8em; color: #95a5a6; margin-top: 50px;">Сгенерировано с помощью Sphinx v4.3.2</p>
+    </div>
+
+    <div class="content">
+        <h1>Справочник API (Документация разработчика)</h1>
+        <p>Ниже представлена автоматически сгенерированная документация исходного кода модулей backend-сервера проекта Web Toolbox. Выгрузка произведена из docstring-комментариев формата reStructuredText.</p>
+
+        <h2 id="password_generator">Модуль: password_generator</h2>
+        <div class="class-header">class <b>PasswordGenerator</b>()</div>
+        <p>Класс для генерации случайных безопасных паролей. Используется на backend-сервере для предоставления утилиты "Генератор паролей" конечным пользователям.</p>
+
+        <div class="method">
+            <div class="method-signature">generate(length: int = 12, use_special_chars: bool = True) &rarr; str</div>
+            <p>Генерирует случайный пароль заданной длины, используя криптографически стойкий модуль random.</p>
+            <table class="parameters">
+                <tr><th>Параметр</th><th>Тип</th><th>Описание</th></tr>
+                <tr><td><b>length</b></td><td><span class="type">int</span></td><td>Длина генерируемого пароля (по умолчанию 12).</td></tr>
+                <tr><td><b>use_special_chars</b></td><td><span class="type">bool</span></td><td>Флаг использования спецсимволов (!@#$%^&*).</td></tr>
+                <tr><td><b>Возвращает</b></td><td><span class="type">str</span></td><td>Сгенерированная строка пароля.</td></tr>
+                <tr><td><b>Исключения</b></td><td><span class="type">ValueError</span></td><td>Если длина пароля меньше 4.</td></tr>
+            </table>
+        </div>
+
+        <h2 id="text_analyzer">Модуль: text_analyzer</h2>
+        <div class="class-header">class <b>TextAnalyzer</b>()</div>
+        <p>Утилита для анализа текстовых данных. Предоставляет статические методы для подсчета количества символов и слов в тексте.</p>
+
+        <div class="method">
+            <div class="method-signature">count_characters(text: str, ignore_spaces: bool = False) &rarr; int</div>
+            <p>Подсчитывает количество символов в тексте.</p>
+            <table class="parameters">
+                <tr><th>Параметр</th><th>Тип</th><th>Описание</th></tr>
+                <tr><td><b>text</b></td><td><span class="type">str</span></td><td>Анализируемый текст.</td></tr>
+                <tr><td><b>ignore_spaces</b></td><td><span class="type">bool</span></td><td>Не учитывать пробелы при подсчете (по умолчанию False).</td></tr>
+                <tr><td><b>Возвращает</b></td><td><span class="type">int</span></td><td>Общее количество символов.</td></tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            &copy; 2023 Команда "Web Toolbox". Документация сгенерирована автоматически.
+        </div>
+    </div>
+</body>
+</html>
